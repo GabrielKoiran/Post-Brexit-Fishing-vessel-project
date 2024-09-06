@@ -7,27 +7,31 @@ This first step of the research process consists in constructing counterfactual 
 
 ## DATA FILES
 
-### liste_86.xlsx
+### [liste_86.xlsx](liste_86.xlsx)
 Description: Publicly available list of ships affected by removal program  
 Origin: link
 
-### all_records.csv
+### all_records.csv (too big to be uploaded on Github)
 Description: European fleet registry records for selected sample of ships ()  
 Origin: link
 
-### universe.csv
+### [zone.csv](zone.csv)
+Description: Correspondance between names and two-letter codes of fishing zones.
+Origin: Entered manually from wikipedia ()
+
+### [universe.csv](universe.csv)
 Description: All vessels from Eu fleet registry, with treated ships identified  
 Origin: Output of R file 1 (filter_clean.r)
 
-### treated_list.csv
+### [treated_list.csv](treated_list.csv)
 Description: List of vessels treated, with information from fleet registry added, including date of destruction  
 Origin: Output of R file 1 (filter_clean.r)
 
-### sum_quartier.csv
+### [sum_quartier.csv](sum_quartier.csv)
 Description: Summary statistics by port on selected ships present in fleet at certain dates, with treatment status  
 Origin: Output of R file 2 (summary_stats.r)
 
-### treatment_progress.csv
+### [treatment_progress.csv](treatment_progress.csv)
 Description: Summary stattistics for ships treated at each date during the year  
 Origin: Output of R file 2 (summary_stats.r)
 
