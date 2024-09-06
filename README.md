@@ -50,23 +50,20 @@ Role:  Download initial raw data and filter it
 Input files: liste_86.xlsx, all_records.csv  
 Output files: universe.csv, treated_list.csv  
 
-### File 2: summary_stats.r
+### [File 2: summary_stats.r](summary_stats.R)
 Role: Summarise treatment by zone and over time  
 Input files: universe.csv, treated_list.csv  
 Output files: sum_quartier.csv, treatment_progress.csv  
-[Link to R file](summary_stats.R)
 
-### File 3: summary_graphs.r
+### [File 3: summary_graphs.r](summary_graphs.r)
 Role: Output treatment graphs  
 Input: sum_quartier.csv, treatment_progress.csv, zone.csv, ric.csv, treated_list.csv  
 Output: treatment_plot.png, carte.png, plots_treated_sales.png, plots_random_sales (and by changing one bit of code, get also for qt and mt), char_space.png  
-[Link to R file](summary_graphs.r)
 
-### File 4: counterfactual_estimation.r
+### [File 4: counterfactual_estimation.r](counterfactual_estimation.R)
 Role: Estimate counterfactual trajectories ship by ship  
 Input: ricPAItemptt.dta  
 Output: ric.csv, neighboring_controls.png, synth_dif.png, ric_cf.csv  
-[Link to R file](counterfactual_estimation.R)
 
 ## GRAPHS (OUTPUT FILES)
 
