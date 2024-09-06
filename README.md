@@ -194,7 +194,7 @@ List of variables. Same as ric.csv, with the following additional variables:
 - "qte_cf_high": highest value between qte_cf_a and qte_cf_b this month. Represents the upper bound of treatment
 - "qte_cf_low": lowest value between qte_cf_a and qte_cf_b this month. Represents the lower bound of treatment
 
-Note: assumptions A and B are relative to the readjustment downwards of the counterfactuals necessary due to the imputation of 0 sales months in the control vessels. Under assumption A, xyz. Under assumption B, xyz.
+Note: assumptions A and B are relative to the readjustment downwards of the counterfactuals necessary due to the imputation of 0 sales months in the control vessels. Under assumption A, the trajectory is adjusted for share of unobserved time points over whole time period of our data. Under assumption B, it is adjusted for share of unobserved time points over last 6 months.
 
 ## R FILES (IN ORDER)
 
@@ -283,4 +283,4 @@ Visualize counterfactuals (and treatment effect, which are non-realized fish sal
 
 Origin: Output of R file 4 (counterfactual_estimation.r)
 
-fautes d'ortho, et ajouter variables 2 dernier data files, et tout relire, et envoyer lien à qqun pour voir si peut ouvrir. vérifier HP. sauts de ligne et points. Fill in meaning assumptions A and B.
+fautes d'ortho, et tout relire, et envoyer lien à qqun pour voir si peut ouvrir. vérifier HP. sauts de ligne et points.
