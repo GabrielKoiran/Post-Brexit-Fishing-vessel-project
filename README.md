@@ -48,23 +48,26 @@ Origin: Output of R file 4 (counterfactual_estimation.r)
 ### File 1: filter_clean.r
 Role:  Download initial raw data and filter it  
 Input files: liste_86.xlsx, all_records.csv  
-Output files: universe.csv, treated_list.csv
+Output files: universe.csv, treated_list.csv  
+[Link to R file](filter_clean.R)
 
 ### File 2: summary_stats.r
 Role: Summarise treatment by zone and over time  
 Input files: universe.csv, treated_list.csv  
-Output files: sum_quartier.csv, treatment_progress.csv
+Output files: sum_quartier.csv, treatment_progress.csv  
+[Link to R file](summary_stats.R)
 
 ### File 3: summary_graphs.r
 Role: Output treatment graphs  
 Input: sum_quartier.csv, treatment_progress.csv, zone.csv, ric.csv, treated_list.csv  
-Output: treatment_plot.png, carte.png, plots_treated_sales.png, plots_random_sales (and by changing one bit of code, get also for qt and mt), char_space.png
+Output: treatment_plot.png, carte.png, plots_treated_sales.png, plots_random_sales (and by changing one bit of code, get also for qt and mt), char_space.png  
+[Link to R file](summary_graphs.R)
 
 ### File 4: counterfactual_estimation.r
 Role: Estimate counterfactual trajectories ship by ship  
 Input: ricPAItemptt.dta  
 Output: ric.csv, neighboring_controls.png, synth_dif.png, ric_cf.csv  
-[Link to file](counterfactual_estimation.R)
+[Link to R file](counterfactual_estimation.R)
 
 ## GRAPHS (OUTPUT FILES)
 
