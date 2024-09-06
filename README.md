@@ -45,11 +45,10 @@ Origin: Output of R file 4 (counterfactual_estimation.r)
 
 ## R FILES (IN ORDER)
 
-### File 1: filter_clean.r
+###  [File 1: filter_clean.r](filter_clean.R)
 Role:  Download initial raw data and filter it  
 Input files: liste_86.xlsx, all_records.csv  
 Output files: universe.csv, treated_list.csv  
-[Link to R file](filter_clean.R)
 
 ### File 2: summary_stats.r
 Role: Summarise treatment by zone and over time  
