@@ -116,7 +116,7 @@ Visualize, for each treated unit, all matched controls according to the selected
 Origin: Output of R file 4 (counterfactual_estimation.r)
 
 ### [synth_dif.png](synth_dif.png)
-Description: complete
+Visualize counterfactuals (and treatment effect, which are non-realized fish sales) estimated using synthetic difference in difference, with the synthdid R package, for each treated unit.  
 Origin: Output of R file 4 (counterfactual_estimation.r)
 
-ALSO ADD GOOGLE DRIVE NOTES, AND REREAD FOR COMPLETION. RELIRE NOTES #. Nom variables ?Accessibility of repository. Ajouter descriptif des variables ? Points à la fin
+ALSO ADD GOOGLE DRIVE NOTES. RELIRE NOTES #. Nom variables ? Accessibility of repository. Points à la fin
