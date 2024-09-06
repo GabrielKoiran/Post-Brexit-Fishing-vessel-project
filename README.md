@@ -22,7 +22,7 @@ Origin: [EU fleet registry](https://webgate.ec.europa.eu/fleet-europa/search_en)
 - Search Data Context = "Search data in the whole history of the vessels"
 
 ### [zone.csv](zone.csv)
-orrespondance between names and two-letter codes of fishing zones.  
+orrespondance between names and two-letter codes of fishing zones  
 Origin: Entered manually [this Wikipedia page](https://fr.wikipedia.org/wiki/Liste_des_quartiers_d%27immatriculation_des_navires_en_France) 
 
 ### [universe.csv](universe.csv)
@@ -50,7 +50,7 @@ Aggregate fish sales data by ship x month cell
 Origin: Output of R file 4 (counterfactual_estimation.r)
 
 ### ric_cf.csv (unavailable due to data restrictions)
-Equivalent of Ric.csv with added counterfactuals, and a high and low scenario corresponding to different imputation methods for missing months.  
+Equivalent of Ric.csv with added counterfactuals, and a high and low scenario corresponding to different imputation methods for missing months  
 Origin: Output of R file 4 (counterfactual_estimation.r)
 
 ## R FILES (IN ORDER)
@@ -78,47 +78,58 @@ Output: ric.csv, neighboring_controls.png, synth_dif.png, ric_cf.csv
 ## GRAPHS (OUTPUT FILES)
 
 ### [treatment_plot.png](treatment_plot.png)
-Cumulative treated (removed) fishing capacity, measured according to different metrics: number of vessels removed, and total legnth, power or shipping volume thereof.  
+Cumulative treated (removed) fishing capacity, measured according to different metrics: number of vessels removed, and total legnth, power or shipping volume thereof  
+
 Origin: Output of R file 3 (summary_graphs.r)
 
 ### [carte.png](carte.png)
-Map of treatment across the French Atlantic coast, both according to total number of ships removed and the share of initial monthly fishing capacity (in volume) removed.  
+Map of treatment across the French Atlantic coast, both according to total number of ships removed and the share of initial monthly fishing capacity (in volume) removed  
+
 Origin: Output of R file 3 (summary_graphs.r)
 
 ### [plots_treated_sales.png](plots_treated_sales.png)
-Helps visualize treatment by plotting the sales history of all 86 treated ships in number of sales. Imputed months are indicated by red dots.   
+Helps visualize treatment by plotting the sales history of all 86 treated ships in number of sales. Imputed months are indicated by red dots   
+
 Origin: Output of R file 3 (summary_graphs.r)
 
 ### [plots_random_sales.png](plots_random_sales.png)
-Helps visualize control units and imputation by plotting the sales history of 250 random ships in number of sales. Imputed months are indicated by red dots.   
+Helps visualize control units and imputation by plotting the sales history of 250 random ships in number of sales. Imputed months are indicated by red dots   
+
 Origin: Output of R file 3 (summary_graphs.r)
 
 ### [plots_treated_quantities.png](plots_treated_quantities.png)
-Helps visualize treatment by plotting the sales history of all 86 treated ships in total quantity of sales. Imputed months are indicated by red dots.   
+Helps visualize treatment by plotting the sales history of all 86 treated ships in total quantity of sales. Imputed months are indicated by red dots   
+
 Origin: Output of R file 3 (summary_graphs.r)
 
 ### [plots_random_quantities.png](plots_random_quantities.png)
-Helps visualize control units and imputation by plotting the sales history of 250 random ships in total quantity of sales. Imputed months are indicated by red dots.   
+Helps visualize control units and imputation by plotting the sales history of 250 random ships in total quantity of sales. Imputed months are indicated by red dots   
+
 Origin: Output of R file 3 (summary_graphs.r)
 
 ### [plots_treated_values.png](plots_treated_values.png)
-Helps visualize treatment by plotting the sales history of all 86 treated ships in total value of sales. Imputed months are indicated by red dots.   
+Helps visualize treatment by plotting the sales history of all 86 treated ships in total value of sales. Imputed months are indicated by red dots   
+
 Origin: Output of R file 3 (summary_graphs.r)
 
 ### [plots_random_values.png](plots_random_values.png)
-Helps visualize control units and imputation by plotting the sales history of 250 random ships in total value of sales. Imputed months are indicated by red dots.   
+Helps visualize control units and imputation by plotting the sales history of 250 random ships in total value of sales. Imputed months are indicated by red dots   
+
 Origin: Output of R file 3 (summary_graphs.r)
 
 ### [char_space.png](char_space.png)
-Situates all treated and control ships in the tonnage (vertical axis) / length (horizontal axis) space to detect outliers and select matching criterion. Light blue points represent treated units and dark blue are controls.  
+Situates all treated and control ships in the tonnage (vertical axis) / length (horizontal axis) space to detect outliers and select matching criterion. Light blue points represent treated units and dark blue are controls  
+
 Origin: Output of R file 3 (summary_graphs.r)
 
 ### [neighboring_controls.png](neighboring_controls.png)
-Visualize, for each treated unit, all matched controls according to the selected criterion in the length/tonnage space. Keep as matched controls only ships that are same gear, and +/- 20% of length and tonnage if treated ship is less than 25m long, and all ships of length above 24m if treated unit is above 25m long.  
+Visualize, for each treated unit, all matched controls according to the selected criterion in the length/tonnage space. Keep as matched controls only ships that are same gear, and +/- 20% of length and tonnage if treated ship is less than 25m long, and all ships of length above 24m if treated unit is above 25m long  
+
 Origin: Output of R file 4 (counterfactual_estimation.r)
 
 ### [synth_dif.png](synth_dif.png)
-Visualize counterfactuals (and treatment effect, which are non-realized fish sales) estimated using synthetic difference in difference, with the synthdid R package, for each treated unit. This graphs represents vessel production in terms of the total value of sales, but counterfactuals were also estimated for total quantity and number of sales in R file 4.  
+Visualize counterfactuals (and treatment effect, which are non-realized fish sales) estimated using synthetic difference in difference, with the synthdid R package, for each treated unit. This graphs represents vessel production in terms of the total value of sales, but counterfactuals were also estimated for total quantity and number of sales in R file 4  
+
 Origin: Output of R file 4 (counterfactual_estimation.r)
 
-ALSO ADD GOOGLE DRIVE NOTES. RELIRE NOTES #. Nom variables ? Accessibility of repository. Points à la fin. Put spaces between everything.
+ALSO ADD GOOGLE DRIVE NOTES. RELIRE NOTES #. Nom variables ? Accessibility of repository.
