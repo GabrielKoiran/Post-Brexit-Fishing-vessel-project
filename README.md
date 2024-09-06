@@ -18,7 +18,7 @@ Origin: Downloaded pdf on [a page of the French ministry of the Sea](https://www
 List of variables:
 - "Dénomination sociale": name of company owning the ship
 - "Numéro de dossier initial": procedure number
-- "Numéro CFR": standardized vessel identification
+- "Numéro CFR": standardized European vessel identification
 - "Immatriculation navire": vessel identification number
 - "Intitulé de l'opération", "Descriptif de l'opération",  "Date prévisionnelle début de l'opération", "Date prévisionnelle fin de l'opération" and "Dénomination de la priorité de l'Union" are all generic variables associated to this policy, and do not vary by vessel.
 - "Montant total dépenses éligibles", "Montant de l'aide publique" and "Montant au titre du régime d'aide SA.104347" all represent the financial aid allocated.
@@ -32,8 +32,50 @@ Origin: [EU fleet registry](https://webgate.ec.europa.eu/fleet-europa/search_en)
 - Period = "All vessels"
 - Search Data Context = "Search data in the whole history of the vessels"
 
+List of variables:
+- "Country of Registration": always France
+- "CFR":  standardized European vessel identification
+- "UVI"
+- "Event": destruction (DES), modification of technical characteristics (MOD), entry into the fleet (CHA), exit from the fleet (RET), first census (CEN), import (IMP), export (EXP) or new construction (CST)
+- "Event Start Date"
+- "Event End Date"
+- "Registration Number"
+- "External marking"
+- "Name of vessel"
+- Place of registration"
+- "Place of registration name"
+- "IRCS"
+- "IRCS indicator"
+- "Licence indicator"
+- "VMS indicator"
+- "ERS indicator"
+- "ERS Exempt indicator"
+- "AIS indicator"
+- "MMSI"
+- "Vessel Type": as defined by the FAO (Food and Agriculture Organization, a UN agency)
+- "Main fishing gear"
+- "Subsidiary fishing gear 1"
+- "Subsidiary fishing gear 2"
+- "Subsidiary fishing gear 3"
+- "Subsidiary fishing gear 4"
+- "Subsidiary fishing gear 5"
+- "LOA": length (in meters)
+- "LBP"
+- "Tonnage GT": tonnage (capacity in tonnes)
+- "Other tonnage"
+- "GTs"
+- "Power of main engine": in HP
+- "Power of auxiliary engine"
+- "Hull material"
+- "Date of entry into service"
+- "Segment"
+- "Country of importation/exportation"
+- "Type of export"
+- "Public aid"
+- "Year of construction"              
+
 ### [zone.csv](zone.csv)
-orrespondance between names and two-letter codes of fishing zones  
+Correspondance between names and two-letter codes of fishing zones  
 
 Origin: Entered manually [this Wikipedia page](https://fr.wikipedia.org/wiki/Liste_des_quartiers_d%27immatriculation_des_navires_en_France) 
 
@@ -41,6 +83,9 @@ Origin: Entered manually [this Wikipedia page](https://fr.wikipedia.org/wiki/Lis
 All vessels from EU fleet registry, with treated ships identified  
 
 Origin: Output of R file 1 (filter_clean.r)
+
+List of variables:
+- 
 
 ### [treated_list.csv](treated_list.csv)
 List of vessels treated, with information from fleet registry added, including date of destruction  
