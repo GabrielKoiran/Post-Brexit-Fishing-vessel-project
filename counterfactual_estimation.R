@@ -228,12 +228,6 @@ count=count+1
 neighboring_controls_list[[count]] <- plot_dimensions
 
 
-
-# FECT ESTIMATOR FOR VALUE
-
-#out.fect <- fect(c3lnmt ~ timetraite + length + tonnage + power, data = sub_ric, index = c("gbat","yearmonth"), method = "fe")
-
-
 # SYNTHETIC DIF AND DIF ESTIMATOR FOR VALUE (INCLUDING GRAPH)
 
 
