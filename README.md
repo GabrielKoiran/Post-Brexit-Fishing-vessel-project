@@ -10,18 +10,18 @@ In this readme file, every data file and output graph is accompanied by its sour
 
 ### [liste_86.xlsx](liste_86.xlsx)
 Publicly available list of ships affected by removal program  
-Origin: Downloaded pdf at [link](https://www.mer.gouv.fr/sites/default/files/2023-12/Liste%20des%20b%C3%A9n%C3%A9ficiaires%20finaux%20PAI%20-%2086%20navires-3.pdf) and converted to excel
+Origin: Downloaded pdf on [a page of the French ministry of the Sea](https://www.mer.gouv.fr/sites/default/files/2023-12/Liste%20des%20b%C3%A9n%C3%A9ficiaires%20finaux%20PAI%20-%2086%20navires-3.pdf) and converted to excel
 
 ### all_records.csv (too big to be uploaded on Github)
 European fleet registry records (universe of French fishing vessels)  
-Origin: [link](https://webgate.ec.europa.eu/fleet-europa/search_en), with the following search criteria:
+[Origin](https://webgate.ec.europa.eu/fleet-europa/search_en) with the following search criteria:
 - Specific country = France
 - Period = "All vessels"
 - Search Data Context = "Search data in the whole history of the vessels"
 
 ### [zone.csv](zone.csv)
 orrespondance between names and two-letter codes of fishing zones.  
-Origin: Entered manually from the following wikipedia page [link](https://fr.wikipedia.org/wiki/Liste_des_quartiers_d%27immatriculation_des_navires_en_France) 
+Origin: Entered manually [this Wikipedia page](https://fr.wikipedia.org/wiki/Liste_des_quartiers_d%27immatriculation_des_navires_en_France) 
 
 ### [universe.csv](universe.csv)
 All vessels from EU fleet registry, with treated ships identified  
