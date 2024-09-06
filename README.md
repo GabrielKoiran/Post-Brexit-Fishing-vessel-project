@@ -134,20 +134,67 @@ List of variables:
 - "power_removed": cumulative combined power of ships removed
 - "length_removed": cumulative combined length of ships removed
 
-### ricPAItemptt.dta (unavailable due to data restrictions)
-Aggregate fish sales data by ship x month cell  
-
-Origin: Data (in Stata format) from national fish transaction database, agregated by Pr. Wolff at the ship-month cell level for relevant ports. Includes imputed values when there are no sales certain months, which is reajusted for in later counterfactual estimation.
-
 ### ric.csv (unavailable due to data restrictions)
 Aggregate fish sales data by ship x month cell  
 
-Origin: Output of R file 4 (counterfactual_estimation.r)
+Origin: Data from national fish transaction database, agregated by Pr. Wolff at the ship-month cell level for relevant ports. Includes imputed values when there are no sales certain months, which is reajusted for in later counterfactual estimation.  
+
+List of variables:
+- "code_bat": vessel identification number 
+- "month": month of observation
+- "year": year of observation
+- "transac": number of sales this month
+- "mt": total value of sales this month
+- "qte": total quantity of sales this month
+- "maxdd": last day of observed sales in the database
+- "maxyy": last year of observed sales in the database
+- "maxmm": last month of observed sales in the database
+- "yearmonth": year x month cell number
+- "maxyearmonth": last year x month cell of observed sales in the database
+- "ntraite": 1 if vessel ever treated, 0 otherwise
+- "timetraite":  treatement status of that vessel that month
+- "firsttraites": 1 if this is the first year x month cell in which the vessel is treated, 0 otherrwise
+- "gbat": new succint vessel identifying number
+- "maingear": gear code of vessel
+- "length": length in meters of vessel
+- "tonnage": tonnage in tons of vessel
+- "power": power in HP of vessel
+- "straitement": treatement status of that vessel that month
+- "gear": broad gear category
+- "trawl": 1 if vessel is a trawler, 0 otherwise
+- "c1lntransac": log of number of transactions for this vessel this month
+- "c1lnqte": log of total quantity of fish sold by this vessel this month
+- "c1lnmt": log of total value of fish sold by this vessel this month
+- "c2lntransac": log of number of transactions for this vessel this month, with cubic extrapolation for missing months when there are at least two observations on each side 
+- "c2lnqte": log of total quantity of fish sold by this vessel this month, with cubic extrapolation for missing months when there are at least two observations on each side 
+- "c2lnmt": log of total value of fish sold by this vessel this month, with cubic extrapolation for missing months when there are at least two observations on each side 
+- "c3lntransac": log of number of transactions for this vessel this month, with linear extrapolation for remaining missing months
+- "c3lnqte": log of total quantity of fish sold by this vessel this month, with linear extrapolation for remaining missing months
+- "c3lnmt":  log of total value of fish sold by this vessel this month, with linear extrapolation for remaining missing months
 
 ### ric_cf.csv (unavailable due to data restrictions)
 Equivalent of Ric.csv with added counterfactuals, and a high and low scenario corresponding to different imputation methods for missing months  
 
-Origin: Output of R file 4 (counterfactual_estimation.r)
+Origin: Output of R file 4 (counterfactual_estimation.r)  
+
+List of variables. Same as ric.csv, with the following additional variables:
+- "simulatemt": counterfactual total value of sales in months after removal of the treated vessel, computed from the synthetic difference in difference using the pool of nearest matched neighbors indentified previously (+/- 20% of length and tonnage if treated ship is less than 25m long, and all ships of length above 24m if treated unit is above 25m long).
+- "simulateqte": counterfactual total quantity of sales in months after removal of the treated vessel, computed from the synthetic difference in difference using the pool of nearest matched neighbors indentified previously (+/- 20% of length and tonnage if treated ship is less than 25m long, and all ships of length above 24m if treated unit is above 25m long).
+- "simulatetransac": counterfactual number of sales in months after removal of the treated vessel, computed from the synthetic difference in difference using the pool of nearest matched neighbors indentified previously (+/- 20% of length and tonnage if treated ship is less than 25m long, and all ships of length above 24m if treated unit is above 25m long).
+- "mt_cf_a": readjusted counterfactual total value of sales under assumption A
+- "mt_cf_b": readjusted counterfactual total value of sales under assumption N
+- "qte_cf_a": readjusted counterfactual total quantity of sales under assumption A
+- "qte_cf_b": readjusted counterfactual total quantity of sales under assumption B
+- "transac_cf_a": readjusted counterfactual number of sales under assumption A
+- "transac_cf_b": readjusted counterfactual number of sales under assumption B
+- "transac_cf_high": highest value between transac_cf_a and transac_cf_b this month. Represents the upper bound of treatment
+- "transac_cf_low": lowest value between transac_cf_a and transac_cf_b this month. Represents the lower bound of treatment
+- "mt_cf_high": highest value between mt_cf_a and mt_cf_b this month. Represents the upper bound of treatment
+- "mt_cf_low": lowest value between mt_cf_a and mt_cf_b this month. Represents the lower bound of treatment
+- "qte_cf_high": highest value between qte_cf_a and qte_cf_b this month. Represents the upper bound of treatment
+- "qte_cf_low": lowest value between qte_cf_a and qte_cf_b this month. Represents the lower bound of treatment
+
+Note: assumptions A and B are relative to the readjustment downwards of the counterfactuals necessary due to the imputation of 0 sales months in the control vessels. Under assumption A, xyz. Under assumption B, xyz.
 
 ## R FILES (IN ORDER)
 
@@ -174,9 +221,10 @@ Output: treatment_plot.png, carte.png, plots_treated_sales.png, plots_random_sal
 
 ### [File 4: counterfactual_estimation.r](counterfactual_estimation.R)
 Estimate counterfactual trajectories ship by ship  
-Input: ricPAItemptt.dta  
 
-Output: ric.csv, neighboring_controls.png, synth_dif.png, ric_cf.csv  
+Input: ric.csv
+
+Output: neighboring_controls.png, synth_dif.png, ric_cf.csv  
 
 ## GRAPHS (OUTPUT FILES)
 
@@ -235,4 +283,4 @@ Visualize counterfactuals (and treatment effect, which are non-realized fish sal
 
 Origin: Output of R file 4 (counterfactual_estimation.r)
 
-fautes d'ortho, et ajouter variables 2 dernier data files
+fautes d'ortho, et ajouter variables 2 dernier data files, et tout relire, et envoyer lien à qqun pour voir si peut ouvrir. vérifier HP. sauts de ligne et points. Fill in meaning assumptions A and B.
