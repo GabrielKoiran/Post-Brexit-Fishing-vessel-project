@@ -235,4 +235,4 @@ Visualize counterfactuals (and treatment effect, which are non-realized fish sal
 
 Origin: Output of R file 4 (counterfactual_estimation.r)
 
-fautes d'ortho
+fautes d'ortho, et ajouter variables 2 dernier data files
