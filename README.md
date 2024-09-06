@@ -148,5 +148,3 @@ Origin: Output of R file 4 (counterfactual_estimation.r)
 Visualize counterfactuals (and treatment effect, which are non-realized fish sales) estimated using synthetic difference in difference, with the synthdid R package, for each treated unit. This graphs represents vessel production in terms of the total value of sales, but counterfactuals were also estimated for total quantity and number of sales in R file 4  
 
 Origin: Output of R file 4 (counterfactual_estimation.r)
-
-Nom variables ? Accessibility of repository.
