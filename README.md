@@ -112,7 +112,7 @@ Situates all treated and control ships in the tonnage (vertical axis) / length (
 Origin: Output of R file 3 (summary_graphs.r)
 
 ### [neighboring_controls.png](neighboring_controls.png)
-Description: complete  
+Visualize, for each treated unit, all matched controls according to the selected criterion in the length/tonnage space. Keep as matched controls only ships that are same gear, and +/- 20% of length and tonnage if treated ship is less than 25m long, and all ships of length above 24m if treated unit is above 25m long.  
 Origin: Output of R file 4 (counterfactual_estimation.r)
 
 ### [synth_dif.png](synth_dif.png)
