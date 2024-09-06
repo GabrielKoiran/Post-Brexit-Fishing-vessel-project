@@ -11,7 +11,7 @@ A [context note](Contextnote.pdf) written from online research in press and gove
 ## DATA FILES
 
 ### [liste_86.xlsx](liste_86.xlsx)
-Publicly available list of ships affected by removal program  
+Publicly available list of ships affected by removal program. Contains some typos corrected in treated_list.csv
 
 Origin: Downloaded pdf on [a page of the French ministry of the Sea](https://www.mer.gouv.fr/sites/default/files/2023-12/Liste%20des%20b%C3%A9n%C3%A9ficiaires%20finaux%20PAI%20-%2086%20navires-3.pdf) and converted to excelv  
 
@@ -30,7 +30,7 @@ Universe of French fishing vessels
 Origin: [EU fleet registry](https://webgate.ec.europa.eu/fleet-europa/search_en) with the following search criteria:
 - Specific country = France
 - Period = "All vessels"
-- Search Data Context = "Search data in the whole history of the vessels"
+- Search Data Context = "Search data in the whole history of the vessels"   
 
 List of variables:
 - "Country of Registration": always France
@@ -82,25 +82,57 @@ Origin: Entered manually [this Wikipedia page](https://fr.wikipedia.org/wiki/Lis
 ### [universe.csv](universe.csv)
 All vessels from EU fleet registry, with treated ships identified  
 
-Origin: Output of R file 1 (filter_clean.r)
+Origin: Output of R file 1 (filter_clean.r)  
 
-List of variables:
-- 
+List of variables: selected variables from all_records.csv, with an additional "treated" corresponding to unit's treatment status (binary).
 
 ### [treated_list.csv](treated_list.csv)
-List of vessels treated, with information from fleet registry added, including date of destruction  
+List of vessels treated, with information from fleet registry added, including date of when they went from being in the fleet to being destroyed or otherwise permanently removed from the fleet.  
 
-Origin: Output of R file 1 (filter_clean.r)
+Origin: Output of R file 1 (filter_clean.r)  
+
+List of variables:
+- "cfr": standardized European vessel identification (typos corrected)
+- "immat": vessel identification number (typos corrected)
+- "cpostal": ship's ZIP code
+- "date": date of exit from the fleet (time of treatment)
+- "name": name of ship for double-checking purposes
+- "place": name of port
+- "type": type of fish engine
+- "length": lenght of ship in meters
+- "tonnage": tonnage of ship in tons
+- "power": power of ship in HP
 
 ### [sum_quartier.csv](sum_quartier.csv)
 Summary statistics by port on selected ships present in fleet at certain dates, with treatment status  
 
-Origin: Output of R file 2 (summary_stats.r)
+Origin: Output of R file 2 (summary_stats.r)  
+
+List of variables:
+- "quartier": port zone
+- "n_untreated": number of control ships
+- "length_untreated": combined length of control ships
+- "tonnage_untreated": combined tonnage of control ships
+- "power_untreated": combined power of control ships
+- "n_treated": number of treated ships
+- "length_treated": combined length of treated ships
+- "tonnage_treated": combined tonnage of treated ships
+- "power_treated": combined power of treated ships
+- "part_volume": share of combined volume belonging to treated ships
+- "part_puissance": share of combined power belonging to treated ships
+- "part_longueur": share of combined length belonging to treated ships
 
 ### [treatment_progress.csv](treatment_progress.csv)
 Summary stattistics for ships treated at each date during the year  
 
-Origin: Output of R file 2 (summary_stats.r)
+Origin: Output of R file 2 (summary_stats.r)  
+
+List of variables:
+- "Date": day of the year in 2023
+- "number_removed": cumulative number of ships removed
+- "volume_removed": cumulative combined volume of ships removed
+- "power_removed": cumulative combined power of ships removed
+- "length_removed": cumulative combined length of ships removed
 
 ### ricPAItemptt.dta (unavailable due to data restrictions)
 Aggregate fish sales data by ship x month cell  
@@ -202,3 +234,5 @@ Origin: Output of R file 4 (counterfactual_estimation.r)
 Visualize counterfactuals (and treatment effect, which are non-realized fish sales) estimated using synthetic difference in difference, with the synthdid R package, for each treated unit. This graphs represents vessel production in terms of the total value of sales, but counterfactuals were also estimated for total quantity and number of sales in R file 4  
 
 Origin: Output of R file 4 (counterfactual_estimation.r)
+
+fautes d'ortho
