@@ -6,6 +6,8 @@ This read-me file summarizes the origin of the data used for the beggining of th
 
 In this readme file, every data file and output graph is accompanied by its source and a brief description, and R files have a brief description of their purpose and of the files they take as inputs and outputs. For all files available in this repository, there is a direct link (in blue) at the appropriate section of this readme file.
 
+A [context note](Context note) written from online research in press and governmental sources as part of this project explains the broad purpose and implications of this reform. It is uploaded in this repository and accompanied by an English translation.
+
 ## DATA FILES
 
 ### [liste_86.xlsx](liste_86.xlsx)
