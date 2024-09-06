@@ -48,7 +48,7 @@ Aggregate fish sales data by ship x month cell
 Origin: Output of R file 4 (counterfactual_estimation.r)
 
 ### ric_cf.csv (unavailable due to data restrictions)
-Equivalent of Ric.csv with added counterfactuals  
+Equivalent of Ric.csv with added counterfactuals, and a high and low scenario corresponding to different imputation methods for missing months.  
 Origin: Output of R file 4 (counterfactual_estimation.r)
 
 ## R FILES (IN ORDER)
@@ -116,7 +116,7 @@ Visualize, for each treated unit, all matched controls according to the selected
 Origin: Output of R file 4 (counterfactual_estimation.r)
 
 ### [synth_dif.png](synth_dif.png)
-Visualize counterfactuals (and treatment effect, which are non-realized fish sales) estimated using synthetic difference in difference, with the synthdid R package, for each treated unit.  
+Visualize counterfactuals (and treatment effect, which are non-realized fish sales) estimated using synthetic difference in difference, with the synthdid R package, for each treated unit. This graphs represents vessel production in terms of the total value of sales, but counterfactuals were also estimated for total quantity and number of sales in R file 4.  
 Origin: Output of R file 4 (counterfactual_estimation.r)
 
 ALSO ADD GOOGLE DRIVE NOTES. RELIRE NOTES #. Nom variables ? Accessibility of repository. Points à la fin
