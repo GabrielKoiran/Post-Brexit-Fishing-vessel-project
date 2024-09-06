@@ -2,7 +2,9 @@
 
 Publicly available code for my project with François-Charles Wolff on studying  the effects of a French 2023 post-Brexit aid package on French fish markets using a protected dataset containing the universe of fish sales in France. This first step of the research process consists in constructing counterfactual fish sale values for fishing vessels that were removed from circulation during 2024.
 
-This read-me file summarizes the origin of the data used for the beggining of this research project, the role of the different R files and the meaning of the various outputs. Unfortunately, some of the data used is protected data from Pr. Wolff, and I am not able to share it here, although I make available the code running on it, as well as the related output. For all files available in this repository, there is a direct link (in blue) at the appropriate section in this readme file.
+This read-me file summarizes the origin of the data used for the beggining of this research project, the role of the different R files and the meaning of the various outputs. Unfortunately, some of the data used is protected data from Pr. Wolff, and I am not able to share it here, although I make available the code running on it, as well as the related output.
+
+In this readme file, every data file and output graph is accompanied by its source and a brief description, and R files have a brief description of their purpose and of the files they take as inputs and outputs. For all files available in this repository, there is a direct link (in blue) at the appropriate section of this readme file.
 
 ## DATA FILES
 
