@@ -4,7 +4,7 @@ Publicly available code for my project with François-Charles Wolff on studying 
 
 This read-me file summarizes the origin of the data used for the beggining of this research project, the role of the different R files and the meaning of the various outputs. Unfortunately, some of the data used is protected data from Pr. Wolff, and I am not able to share it here, although I make available the code running on it, as well as the related output.
 
-In this readme file, every data file and output graph is accompanied by its source and a brief description, and R files have a brief description of their purpose and of the files they take as inputs and outputs. For all files available in this repository, there is a direct link (in blue) at the appropriate section of this readme file.
+In this readme file, every data file and output graph is accompanied by its source and a brief description, as well as a list of variables and their description for data files, and R files have a brief description of their purpose and of the files they take as inputs and outputs. For all files available in this repository, there is a direct link (in blue) at the appropriate section of this readme file.
 
 A [context note](Contextnote.pdf) written from online research in press and governmental sources as part of this project explains the broad purpose and implications of this reform. It is uploaded in this repository and accompanied by an English translation.
 
@@ -13,7 +13,16 @@ A [context note](Contextnote.pdf) written from online research in press and gove
 ### [liste_86.xlsx](liste_86.xlsx)
 Publicly available list of ships affected by removal program  
 
-Origin: Downloaded pdf on [a page of the French ministry of the Sea](https://www.mer.gouv.fr/sites/default/files/2023-12/Liste%20des%20b%C3%A9n%C3%A9ficiaires%20finaux%20PAI%20-%2086%20navires-3.pdf) and converted to excel
+Origin: Downloaded pdf on [a page of the French ministry of the Sea](https://www.mer.gouv.fr/sites/default/files/2023-12/Liste%20des%20b%C3%A9n%C3%A9ficiaires%20finaux%20PAI%20-%2086%20navires-3.pdf) and converted to excelv  
+
+List of variables:
+- "Dénomination sociale": name of company owning the ship
+- "Numéro de dossier initial": procedure number
+- "Numéro CFR": standardized vessel identification
+- "Immatriculation navire": vessel identification number
+- "Intitulé de l'opération", "Descriptif de l'opération",  "Date prévisionnelle début de l'opération", "Date prévisionnelle fin de l'opération" and "Dénomination de la priorité de l'Union" are all generic variables associated to this policy, and do not vary by vessel.
+- "Montant total dépenses éligibles", "Montant de l'aide publique" and "Montant au titre du régime d'aide SA.104347" all represent the financial aid allocated.
+- "Code postal de l'opération" : vesssel's ZIP code
 
 ### all_records.csv (too big to be uploaded on Github)
 Universe of French fishing vessels  
