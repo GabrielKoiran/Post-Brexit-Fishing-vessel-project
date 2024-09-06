@@ -71,32 +71,48 @@ Output: ric.csv, neighboring_controls.png, synth_dif.png, ric_cf.csv
 
 ## GRAPHS (OUTPUT FILES)
 
-### treatment_plot.png
+### [treatment_plot.png](treatment_plot.png)
 Description: complete  
 Origin: Output of R file 3 (summary_graphs.r)
 
-### carte.png
+### [carte.png](carte.png)
 Description: complete  
 Origin: Output of R file 3 (summary_graphs.r)
 
-### plots_treated_sales.png
+### [plots_treated_sales.png](plots_treated_sales.png)
 Description: complete  
 Origin: Output of R file 3 (summary_graphs.r)
 
-### plots_random_sales.png
+### [plots_random_sales.png](plots_random_sales.png)
 Description: complete  
 Origin: Output of R file 3 (summary_graphs.r)
 
-### char_space.png
+### [plots_treated_quantities.png](plots_treated_quantities.png)
 Description: complete  
 Origin: Output of R file 3 (summary_graphs.r)
 
-### neighboring_controls.png
+### [plots_random_quantities.png](plots_random_quantities.png)
+Description: complete  
+Origin: Output of R file 3 (summary_graphs.r)
+
+### [plots_treated_values.png](plots_treated_values.png)
+Description: complete  
+Origin: Output of R file 3 (summary_graphs.r)
+
+### [plots_random_values.png](plots_random_values.png)
+Description: complete  
+Origin: Output of R file 3 (summary_graphs.r)
+
+### [char_space.png](char_space.png)
+Description: complete  
+Origin: Output of R file 3 (summary_graphs.r)
+
+### [neighboring_controls.png](neighboring_controls.png)
 Description: complete  
 Origin: Output of R file 4 (counterfactual_estimation.r)
 
-### synth_dif.png
+### [synth_dif.png](synth_dif.png)
 Description: complete
 Origin: Output of R file 4 (counterfactual_estimation.r)
 
-ALSO ADD GOOGLE DRIVE NOTES, AND LINKS TO DIFFERENT FILES, AND REREAD FOR COMPLETION. RELIRE NOTES #. Clear up exact graphs...
+ALSO ADD GOOGLE DRIVE NOTES, AND LINKS TO DIFFERENT FILES, AND REREAD FOR COMPLETION. RELIRE NOTES #. Remplir description. Nom variables ?Accessibility of repository.
