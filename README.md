@@ -1,9 +1,8 @@
 # Post-Brexit-Fishing-vessel-project
-Publicly available code for my project with François-Charles Wolff on studying  the effects of a French 2023 post-Brexit aid package on French fish markets using a protected dataset containing the universe of fish sales in France.
 
-This read-me file summarizes the origin of the data used for the beggining of this research project, the role of the different R files and the meaning of the various outputs. Unfortunately, some of the data used is protected data from Pr. Wolff, and I am not able to share it here, although I make available the code running on it and some of the related output.
+Publicly available code for my project with François-Charles Wolff on studying  the effects of a French 2023 post-Brexit aid package on French fish markets using a protected dataset containing the universe of fish sales in France. This first step of the research process consists in constructing counterfactual fish sale values for fishing vessels that were removed from circulation during 2024.
 
-This first step of the research process consists in constructing counterfactual fish sale values for fishing vessels that were removed from circulation during 2024.
+This read-me file summarizes the origin of the data used for the beggining of this research project, the role of the different R files and the meaning of the various outputs. Unfortunately, some of the data used is protected data from Pr. Wolff, and I am not able to share it here, although I make available the code running on it, as well as the related output. For all files available in this repository, there is a direct link (in blue) at the appropriate section in this readme file.
 
 ## DATA FILES
 
@@ -12,12 +11,15 @@ Description: Publicly available list of ships affected by removal program
 Origin: link
 
 ### all_records.csv (too big to be uploaded on Github)
-Description: European fleet registry records for selected sample of ships ()  
-Origin: link
+Description: European fleet registry records (universe of French fishing vessels)
+Origin: [link](https://webgate.ec.europa.eu/fleet-europa/search_en), with the following search criteria:
+- Specific country = France
+- Period = "All vessels"
+- Search Data Context = "Search data in the whole history of the vessels"
 
 ### [zone.csv](zone.csv)
 Description: Correspondance between names and two-letter codes of fishing zones.
-Origin: Entered manually from wikipedia ()
+Origin: Entered manually from the following wikipedia page [link](https://fr.wikipedia.org/wiki/Liste_des_quartiers_d%27immatriculation_des_navires_en_France) 
 
 ### [universe.csv](universe.csv)
 Description: All vessels from Eu fleet registry, with treated ships identified  
@@ -115,4 +117,4 @@ Origin: Output of R file 4 (counterfactual_estimation.r)
 Description: complete
 Origin: Output of R file 4 (counterfactual_estimation.r)
 
-ALSO ADD GOOGLE DRIVE NOTES, AND LINKS TO DIFFERENT FILES, AND REREAD FOR COMPLETION. RELIRE NOTES #. Remplir description. Nom variables ?Accessibility of repository.
+ALSO ADD GOOGLE DRIVE NOTES, AND LINKS TO DIFFERENT FILES, AND REREAD FOR COMPLETION. RELIRE NOTES #. Remplir description. Nom variables ?Accessibility of repository. Ajouter descriptif des variables ?
