@@ -63,7 +63,8 @@ Output: treatment_plot.png, carte.png, plots_treated_sales.png, plots_random_sal
 ### File 4: counterfactual_estimation.r
 Role: Estimate counterfactual trajectories ship by ship  
 Input: ricPAItemptt.dta  
-Output: ric.csv, neighboring_controls.png, synth_dif.png, ric_cf.csv
+Output: ric.csv, neighboring_controls.png, synth_dif.png, ric_cf.csv  
+[Link to file](counterfactual_estimation.R)
 
 ## GRAPHS (OUTPUT FILES)
 
@@ -96,5 +97,3 @@ Description: complete
 Origin: Output of R file 4 (counterfactual_estimation.r)
 
 ALSO ADD GOOGLE DRIVE NOTES, AND LINKS TO DIFFERENT FILES, AND REREAD FOR COMPLETION. RELIRE NOTES #
-
-[Contribution guidelines for this project](counterfactual_estimation.R)
