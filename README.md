@@ -35,15 +35,15 @@ Origin: Output of R file 2 (summary_stats.r)
 Description: Summary stattistics for ships treated at each date during the year  
 Origin: Output of R file 2 (summary_stats.r)
 
-### ricPAItemptt.dta (unavailable of Github due to data restrictions)
+### ricPAItemptt.dta (unavailable due to data restrictions)
 Description: Aggregate fish sales data by ship x month cell  
 Origin: Data (in Stata format) from national fish transaction database, agregated by Pr. Wolff at the ship-month cell level for relevant ports.
 
-### ric.csv (unavailable of Github due to data restrictions)
+### ric.csv (unavailable due to data restrictions)
 Description: Aggregate fish sales data by ship x month cell  
 Origin: Output of R file 4 (counterfactual_estimation.r)
 
-### ric_cf.csv (unavailable of Github due to data restrictions)
+### ric_cf.csv (unavailable due to data restrictions)
 Description: ric.csv with added counterfactuals  
 Origin: Output of R file 4 (counterfactual_estimation.r)
 
@@ -99,4 +99,4 @@ Origin: Output of R file 4 (counterfactual_estimation.r)
 Description: complete
 Origin: Output of R file 4 (counterfactual_estimation.r)
 
-ALSO ADD GOOGLE DRIVE NOTES, AND LINKS TO DIFFERENT FILES, AND REREAD FOR COMPLETION. RELIRE NOTES #
+ALSO ADD GOOGLE DRIVE NOTES, AND LINKS TO DIFFERENT FILES, AND REREAD FOR COMPLETION. RELIRE NOTES #. Clear up exact graphs...
