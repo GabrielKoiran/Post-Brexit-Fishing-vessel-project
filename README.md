@@ -61,7 +61,7 @@ Output files: sum_quartier.csv, treatment_progress.csv
 Role: Output treatment graphs  
 Input: sum_quartier.csv, treatment_progress.csv, zone.csv, ric.csv, treated_list.csv  
 Output: treatment_plot.png, carte.png, plots_treated_sales.png, plots_random_sales (and by changing one bit of code, get also for qt and mt), char_space.png  
-[Link to R file](summary_graphs.R)
+[Link to R file](summary_graphs.r)
 
 ### File 4: counterfactual_estimation.r
 Role: Estimate counterfactual trajectories ship by ship  
