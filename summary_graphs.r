@@ -185,32 +185,6 @@ fr <- st_union(fr, by_feature = FALSE)
 # Create map
 # https://r-graph-gallery.com/330-bubble-map-with-ggplot2.html
 
-# For how to delete axis
-# https://ggplot2.tidyverse.org/reference/theme.html
-# https://www.geeksforgeeks.org/remove-axis-labels-and-ticks-in-ggplot2-plot-in-r/
-
-#For how to delete part of legend
-# https://stackoverflow.com/questions/14604435/turning-off-some-legends-in-a-ggplot
-
-#How to rename legend sections
-# https://www.datanovia.com/en/blog/how-to-change-ggplot-labels/#:~:text=You%20can%20use%20labs(),(aes(fill%20%3D%20dose))
-
-#Color scale
-#https://sjspielman.github.io/introverse/articles/color_fill_scales.html
-
-#Random links
-#https://ggplot2-book.org/scales-colour
-#https://r-spatial.org/r/2018/10/25/ggplot2-sf.html
-#https://r-graph-gallery.com/map.html
-#https://rdrr.io/cran/spData/man/world.html
-#https://www.geeksforgeeks.org/making-maps-with-r/
-#https://lrouviere.github.io/TUTO_VISU/faire-des-cartes-avec-r.html
-#https://r-tmap.github.io/tmap-book/visual-variables.html
-#https://jamescheshire.github.io/learningR/mapping-crime-in-camden.html
-#https://lrouviere.github.io/TUTO_VISU_R/08-carto.html
-#https://tmieno2.github.io/R-as-GIS-for-Economists/turning-a-data-frame-of-points-into-an-sf.html
-#https://r-graph-gallery.com/330-bubble-map-with-ggplot2.html
-
 carte_france_nombre_retires <- ggplot(fr) +
   geom_sf() +
   geom_sf(data = criees, aes (color=criees$part_volume, size=criees$n_treated, alpha=0.8), linewidth = 0) +
