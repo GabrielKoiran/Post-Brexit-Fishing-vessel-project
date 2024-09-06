@@ -13,8 +13,8 @@ Publicly available list of ships affected by removal program
 Origin: Downloaded pdf on [a page of the French ministry of the Sea](https://www.mer.gouv.fr/sites/default/files/2023-12/Liste%20des%20b%C3%A9n%C3%A9ficiaires%20finaux%20PAI%20-%2086%20navires-3.pdf) and converted to excel
 
 ### all_records.csv (too big to be uploaded on Github)
-European fleet registry records (universe of French fishing vessels)  
-[Origin](https://webgate.ec.europa.eu/fleet-europa/search_en) with the following search criteria:
+Universe of French fishing vessels  
+Origin: [EU fleet registry](https://webgate.ec.europa.eu/fleet-europa/search_en) with the following search criteria:
 - Specific country = France
 - Period = "All vessels"
 - Search Data Context = "Search data in the whole history of the vessels"
