@@ -64,7 +64,7 @@ List of variables:
 - "Tonnage GT": tonnage (capacity in tonnes)
 - "Other tonnage"
 - "GTs"
-- "Power of main engine": in HP
+- "Power of main engine": in kW
 - "Power of auxiliary engine"
 - "Hull material"
 - "Date of entry into service"
@@ -101,7 +101,7 @@ List of variables:
 - "type": type of fish engine
 - "length": length of ship in meters
 - "tonnage": tonnage of ship in tons
-- "power": power of ship in HP
+- "power": power of ship in kW
 
 ### [sum_quartier.csv](sum_quartier.csv)
 Summary statistics by port on selected ships present in fleet at certain dates, with treatment status  
@@ -158,7 +158,7 @@ List of variables:
 - "maingear": gear code of vessel
 - "length": length in meters of vessel
 - "tonnage": tonnage in tons of vessel
-- "power": power in HP of vessel
+- "power": power in kW of vessel
 - "straitement": treatment status of that vessel that month
 - "gear": broad gear category
 - "trawl": 1 if vessel is a trawler, 0 otherwise
@@ -282,5 +282,3 @@ Origin: Output of R file 4 ([counterfactual_estimation.r](counterfactual_estimat
 Visualize counterfactuals (and treatment effect, which are non-realized fish sales) estimated using synthetic difference in difference, with the synthdid R package, for each treated unit. This graphs represents vessel production in terms of the total value of sales, but counterfactuals were also estimated for total quantity and number of sales in R file 4  
 
 Origin: Output of R file 4 ([counterfactual_estimation.r](counterfactual_estimation.r))
-
-et tout relire, et envoyer lien à qqun pour voir si peut ouvrir. vérifier HP. sauts de ligne et points.
