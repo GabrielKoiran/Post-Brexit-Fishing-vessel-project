@@ -2,7 +2,7 @@
 
 Publicly available code for my project with François-Charles Wolff on studying  the effects of a French 2023 post-Brexit aid package on French fish markets using a protected dataset containing the universe of fish sales in France. This first step of the research process consists in constructing counterfactual fish sale values for fishing vessels that were removed from circulation during 2024.
 
-This read-me file summarizes the origin of the data used for the beggining of this research project, the role of the different R files and the meaning of the various outputs. Unfortunately, some of the data used is protected data from Pr. Wolff, and I am not able to share it here, although I make available the code running on it, as well as the related output.
+This read-me file summarizes the origin of the data used for the begining of this research project, the role of the different R files and the meaning of the various outputs. Unfortunately, some of the data used is protected data from Pr. Wolff, and I am not able to share it here, although I make available the code running on it, as well as the related output.
 
 In this readme file, every data file and output graph is accompanied by its source and a brief description, as well as a list of variables and their description for data files, and R files have a brief description of their purpose and of the files they take as inputs and outputs. For all files available in this repository, there is a direct link (in blue) at the appropriate section of this readme file.
 
@@ -75,21 +75,21 @@ List of variables:
 - "Year of construction"              
 
 ### [zone.csv](zone.csv)
-Correspondance between names and two-letter codes of fishing zones  
+Correspondence between names and two-letter codes of fishing zones  
 
 Origin: Entered manually [this Wikipedia page](https://fr.wikipedia.org/wiki/Liste_des_quartiers_d%27immatriculation_des_navires_en_France) 
 
 ### [universe.csv](universe.csv)
 All vessels from EU fleet registry, with treated ships identified  
 
-Origin: Output of R file 1 (filter_clean.r)  
+Origin: Output of R file 1 ([filter_clean.r](filter_clean.r))  
 
 List of variables: selected variables from all_records.csv, with an additional "treated" corresponding to unit's treatment status (binary).
 
 ### [treated_list.csv](treated_list.csv)
 List of vessels treated, with information from fleet registry added, including date of when they went from being in the fleet to being destroyed or otherwise permanently removed from the fleet.  
 
-Origin: Output of R file 1 (filter_clean.r)  
+Origin: Output of R file 1 ([filter_clean.r](filter_clean.r))  
 
 List of variables:
 - "cfr": standardized European vessel identification (typos corrected)
@@ -99,14 +99,14 @@ List of variables:
 - "name": name of ship for double-checking purposes
 - "place": name of port
 - "type": type of fish engine
-- "length": lenght of ship in meters
+- "length": length of ship in meters
 - "tonnage": tonnage of ship in tons
 - "power": power of ship in HP
 
 ### [sum_quartier.csv](sum_quartier.csv)
 Summary statistics by port on selected ships present in fleet at certain dates, with treatment status  
 
-Origin: Output of R file 2 (summary_stats.r)  
+Origin: Output of R file 2 ([summary_stats.r](summary_stats.r))  
 
 List of variables:
 - "quartier": port zone
@@ -123,9 +123,9 @@ List of variables:
 - "part_longueur": share of combined length belonging to treated ships
 
 ### [treatment_progress.csv](treatment_progress.csv)
-Summary stattistics for ships treated at each date during the year  
+Summary statistics for ships treated at each date during the year  
 
-Origin: Output of R file 2 (summary_stats.r)  
+Origin: Output of R file 2 ([summary_stats.r](summary_stats.r))  
 
 List of variables:
 - "Date": day of the year in 2023
@@ -137,7 +137,7 @@ List of variables:
 ### ric.csv (unavailable due to data restrictions)
 Aggregate fish sales data by ship x month cell  
 
-Origin: Data from national fish transaction database, agregated by Pr. Wolff at the ship-month cell level for relevant ports. Includes imputed values when there are no sales certain months, which is reajusted for in later counterfactual estimation.  
+Origin: Data from national fish transaction database, aggregated by Pr. Wolff at the ship-month cell level for relevant ports. Includes imputed values when there are no sales certain months, which is readjusted for in later counterfactual estimation.  
 
 List of variables:
 - "code_bat": vessel identification number 
@@ -152,14 +152,14 @@ List of variables:
 - "yearmonth": year x month cell number
 - "maxyearmonth": last year x month cell of observed sales in the database
 - "ntraite": 1 if vessel ever treated, 0 otherwise
-- "timetraite":  treatement status of that vessel that month
-- "firsttraites": 1 if this is the first year x month cell in which the vessel is treated, 0 otherrwise
-- "gbat": new succint vessel identifying number
+- "timetraite":  treatment status of that vessel that month
+- "firsttraites": 1 if this is the first year x month cell in which the vessel is treated, 0 otherwise
+- "gbat": new succinct vessel identifying number
 - "maingear": gear code of vessel
 - "length": length in meters of vessel
 - "tonnage": tonnage in tons of vessel
 - "power": power in HP of vessel
-- "straitement": treatement status of that vessel that month
+- "straitement": treatment status of that vessel that month
 - "gear": broad gear category
 - "trawl": 1 if vessel is a trawler, 0 otherwise
 - "c1lntransac": log of number of transactions for this vessel this month
@@ -175,12 +175,12 @@ List of variables:
 ### ric_cf.csv (unavailable due to data restrictions)
 Equivalent of Ric.csv with added counterfactuals, and a high and low scenario corresponding to different imputation methods for missing months  
 
-Origin: Output of R file 4 (counterfactual_estimation.r)  
+Origin: Output of R file 4 ([counterfactual_estimation.r](counterfactual_estimation.r))  
 
 List of variables. Same as ric.csv, with the following additional variables:
-- "simulatemt": counterfactual total value of sales in months after removal of the treated vessel, computed from the synthetic difference in difference using the pool of nearest matched neighbors indentified previously (+/- 20% of length and tonnage if treated ship is less than 25m long, and all ships of length above 24m if treated unit is above 25m long).
-- "simulateqte": counterfactual total quantity of sales in months after removal of the treated vessel, computed from the synthetic difference in difference using the pool of nearest matched neighbors indentified previously (+/- 20% of length and tonnage if treated ship is less than 25m long, and all ships of length above 24m if treated unit is above 25m long).
-- "simulatetransac": counterfactual number of sales in months after removal of the treated vessel, computed from the synthetic difference in difference using the pool of nearest matched neighbors indentified previously (+/- 20% of length and tonnage if treated ship is less than 25m long, and all ships of length above 24m if treated unit is above 25m long).
+- "simulatemt": counterfactual total value of sales in months after removal of the treated vessel, computed from the synthetic difference in difference using the pool of nearest matched neighbors identified previously (+/- 20% of length and tonnage if treated ship is less than 25m long, and all ships of length above 24m if treated unit is above 25m long).
+- "simulateqte": counterfactual total quantity of sales in months after removal of the treated vessel, computed from the synthetic difference in difference using the pool of nearest matched neighbors identified previously (+/- 20% of length and tonnage if treated ship is less than 25m long, and all ships of length above 24m if treated unit is above 25m long).
+- "simulatetransac": counterfactual number of sales in months after removal of the treated vessel, computed from the synthetic difference in difference using the pool of nearest matched neighbors identified previously (+/- 20% of length and tonnage if treated ship is less than 25m long, and all ships of length above 24m if treated unit is above 25m long).
 - "mt_cf_a": readjusted counterfactual total value of sales under assumption A
 - "mt_cf_b": readjusted counterfactual total value of sales under assumption N
 - "qte_cf_a": readjusted counterfactual total quantity of sales under assumption A
@@ -201,86 +201,86 @@ Note: assumptions A and B are relative to the readjustment downwards of the coun
 ###  [File 1: filter_clean.r](filter_clean.R)
 Download initial raw data and filter it  
 
-Input files: liste_86.xlsx, all_records.csv  
+Input files: [liste_86.xlsx](liste_86.xlsx), all_records.csv  
 
-Output files: universe.csv, treated_list.csv  
+Output files: [universe.csv](universe.csv), [treated_list.csv](treated_list.csv)  
 
 ### [File 2: summary_stats.r](summary_stats.R)
 Summarise treatment by zone and over time  
 
-Input files: universe.csv, treated_list.csv  
+Input files: [universe.csv](universe.csv), [treated_list.csv](treated_list.csv)  
 
-Output files: sum_quartier.csv, treatment_progress.csv  
+Output files: [sum_quartier.csv](sum_quartier.csv), [treatment_progress.csv](treatment_progress.csv)  
 
 ### [File 3: summary_graphs.r](summary_graphs.r)
 Output treatment graphs  
 
-Input: [sum_quartier.csv](sum_quartier.csv), [treatment_progress.csv](treatment_progress.csv), [zone.csv](zone.csv), ric.csv, treated_list.csv  
+Input: [sum_quartier.csv](sum_quartier.csv), [treatment_progress.csv](treatment_progress.csv), [zone.csv](zone.csv), ric.csv, [treated_list.csv](treated_list.csv)  
 
-Output: treatment_plot.png, carte.png, plots_treated_sales.png, plots_random_sales, plots_treated_values.png, plots_random_values, plots_treated_quantities.png, plots_random_quantities, char_space.png  
+Output: [treatment_plot.png](treatment_plot.png), [carte.png](carte.png), [plots_treated_sales.png](plots_treated_sales.png), [plots_random_sales](plots_random_sales), [plots_treated_values.png](plots_treated_values.png), [plots_random_values](plots_random_values), [plots_treated_quantities.png](plots_treated_quantities.png), [plots_random_quantities](plots_random_quantities), [char_space.png](char_space.png)  
 
 ### [File 4: counterfactual_estimation.r](counterfactual_estimation.R)
 Estimate counterfactual trajectories ship by ship  
 
 Input: ric.csv
 
-Output: neighboring_controls.png, synth_dif.png, ric_cf.csv  
+Output: [neighboring_controls.png](neighboring_controls.png), [synth_dif.png](synth_dif.png), ric_cf.csv  
 
 ## GRAPHS (OUTPUT FILES)
 
 ### [treatment_plot.png](treatment_plot.png)
 Cumulative treated (removed) fishing capacity, measured according to different metrics: number of vessels removed, and total legnth, power or shipping volume thereof  
 
-Origin: Output of R file 3 (summary_graphs.r)
+Origin: Output of R file 3 ([summary_graphs.r](summary_graphs.r))
 
 ### [carte.png](carte.png)
 Map of treatment across the French Atlantic coast, both according to total number of ships removed and the share of initial monthly fishing capacity (in volume) removed  
 
-Origin: Output of R file 3 (summary_graphs.r)
+Origin: Output of R file 3 ([summary_graphs.r](summary_graphs.r))
 
 ### [plots_treated_sales.png](plots_treated_sales.png)
 Helps visualize treatment by plotting the sales history of all 86 treated ships in number of sales. Imputed months are indicated by red dots   
 
-Origin: Output of R file 3 (summary_graphs.r)
+Origin: Output of R file 3 ([summary_graphs.r](summary_graphs.r))
 
 ### [plots_random_sales.png](plots_random_sales.png)
 Helps visualize control units and imputation by plotting the sales history of 250 random ships in number of sales. Imputed months are indicated by red dots   
 
-Origin: Output of R file 3 (summary_graphs.r)
+Origin: Output of R file 3 ([summary_graphs.r](summary_graphs.r))
 
 ### [plots_treated_quantities.png](plots_treated_quantities.png)
 Helps visualize treatment by plotting the sales history of all 86 treated ships in total quantity of sales. Imputed months are indicated by red dots   
 
-Origin: Output of R file 3 (summary_graphs.r)
+Origin: Output of R file 3 ([summary_graphs.r](summary_graphs.r))
 
 ### [plots_random_quantities.png](plots_random_quantities.png)
 Helps visualize control units and imputation by plotting the sales history of 250 random ships in total quantity of sales. Imputed months are indicated by red dots   
 
-Origin: Output of R file 3 (summary_graphs.r)
+Origin: Output of R file 3 ([summary_graphs.r](summary_graphs.r))
 
 ### [plots_treated_values.png](plots_treated_values.png)
 Helps visualize treatment by plotting the sales history of all 86 treated ships in total value of sales. Imputed months are indicated by red dots   
 
-Origin: Output of R file 3 (summary_graphs.r)
+Origin: Output of R file 3 ([summary_graphs.r](summary_graphs.r))
 
 ### [plots_random_values.png](plots_random_values.png)
 Helps visualize control units and imputation by plotting the sales history of 250 random ships in total value of sales. Imputed months are indicated by red dots   
 
-Origin: Output of R file 3 (summary_graphs.r)
+Origin: Output of R file 3 ([summary_graphs.r](summary_graphs.r))
 
 ### [char_space.png](char_space.png)
 Situates all treated and control ships in the tonnage (vertical axis) / length (horizontal axis) space to detect outliers and select matching criterion. Light blue points represent treated units and dark blue are controls  
 
-Origin: Output of R file 3 (summary_graphs.r)
+Origin: Output of R file 3 ([summary_graphs.r](summary_graphs.r))
 
 ### [neighboring_controls.png](neighboring_controls.png)
 Visualize, for each treated unit, all matched controls according to the selected criterion in the length/tonnage space. Keep as matched controls only ships that are same gear, and +/- 20% of length and tonnage if treated ship is less than 25m long, and all ships of length above 24m if treated unit is above 25m long  
 
-Origin: Output of R file 4 (counterfactual_estimation.r)
+Origin: Output of R file 4 ([counterfactual_estimation.r](counterfactual_estimation.r))
 
 ### [synth_dif.png](synth_dif.png)
 Visualize counterfactuals (and treatment effect, which are non-realized fish sales) estimated using synthetic difference in difference, with the synthdid R package, for each treated unit. This graphs represents vessel production in terms of the total value of sales, but counterfactuals were also estimated for total quantity and number of sales in R file 4  
 
-Origin: Output of R file 4 (counterfactual_estimation.r)
+Origin: Output of R file 4 ([counterfactual_estimation.r](counterfactual_estimation.r))
 
-fautes d'ortho, et tout relire, et envoyer lien à qqun pour voir si peut ouvrir. vérifier HP. sauts de ligne et points.
+et tout relire, et envoyer lien à qqun pour voir si peut ouvrir. vérifier HP. sauts de ligne et points.
