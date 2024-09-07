@@ -215,7 +215,7 @@ Output files: sum_quartier.csv, treatment_progress.csv
 ### [File 3: summary_graphs.r](summary_graphs.r)
 Output treatment graphs  
 
-Input: sum_quartier.csv, treatment_progress.csv, zone.csv, ric.csv, treated_list.csv  
+Input: [sum_quartier.csv](sum_quartier.csv), [treatment_progress.csv](treatment_progress.csv), [zone.csv](zone.csv), ric.csv, treated_list.csv  
 
 Output: treatment_plot.png, carte.png, plots_treated_sales.png, plots_random_sales, plots_treated_values.png, plots_random_values, plots_treated_quantities.png, plots_random_quantities, char_space.png  
 
